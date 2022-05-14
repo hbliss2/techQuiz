@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #5856D6;
+}
+
+header::after{
+  content: '';
+  display: table;
+  clear:both;
+}
+
+.navigation {
+  display: flex;
+  justify-content:space-between;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.wordmark{
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Lato";
+  width: 332px;
+}
+.home {
+  font-family: "Montserrat";
+  color: #F9F9F9;
+  text-decoration: none;
+}
+
+/* find another way to add space around these elements without this padding */
+.logo {
+  padding: 10px 0;
+}
+
+
+nav a {
+  color:#F7F7F7;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: black;
+}

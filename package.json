@@ -1,0 +1,15 @@
+{
+  "name": "nansen_tech_quiz",
+  "version": "1.0.0",
+  "description": "jr ui dev tech quiz for nansen",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server --port 8080",
+    "start": "npm run lite"
+  },
+  "author": "Helena Bliss",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^1.3.1"
+  }
+}
