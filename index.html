@@ -16,23 +16,32 @@
       <div class="navigation">
         <div class="wordmark">
           <div class="logo"></div>
-          <img src="/images/rocketIcon.svg" alt="logo" class="logo">
+          <a href="#home"><img src="/images/rocketIcon.svg" alt="logo" class="logo"></a>
           <a class="home" href="#home">Apollo</a>
         </div>
-        <nav>
-          <a href="#">Schedule</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
+        <nav class="navbar">
+          <a class="burger-nav"></a>
+          <ul class="nav">
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
       </div>
     </header>
-    <!-- <div class="navbar">
-      <a class="active" href="#home">Apollo</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </div> -->
-    <h1>Hello Helena</h1>
-	<script src="index.js"></script>
+    <div class="hero">
+        <h1>Shoot for the Moon</h1>
+        <button>Learn More</button>
+    </div>
+    <main>
+      <div class="progress">
+        <h2>0% Done</h2>
+        <progress value="0" max="100"></progress>
+      </div>
+      <div class="todo"></div>
+    </main>
+    <footer></footer>
   </body>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="index.js"></script>
 </html>
