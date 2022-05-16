@@ -15,7 +15,7 @@ header {
   top: 0;
 }
 
-header, main, footer {
+main, footer {
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -26,6 +26,8 @@ header, main, footer {
   align-items: center;
   height: 75px;
   gap: 12px;
+  padding-left: 100px;
+  padding-right: 100px;
 
   font-weight: bold;
   font-size: 24px;
@@ -39,12 +41,12 @@ header, main, footer {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-end;
   padding: 0px;
   gap: 24px;
   list-style: none;
 
-  width: 332px;
+  width: 30%;
   height: 29px;
 
   font-family: "Lato";
@@ -56,13 +58,22 @@ header, main, footer {
   text-decoration: none;
 }
 
-nav a {
+.nav a {
   color:#F7F7F7;
   text-decoration: none;
 }
-
-nav a:hover{
+.nav a:hover{
   color: black;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.ex {
+  display: none;
+  cursor: pointer;
 }
 
 .hero {
@@ -71,9 +82,8 @@ nav a:hover{
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
-  height: 480px;
+  height: 620px;
   width: 100%;
-  padding: 0px;
 
   background: url(/images/Astronaut_Darkened\ 1.jpg);
   object-fit: fill;
@@ -83,9 +93,10 @@ nav a:hover{
 
   font-family: 'Lato';
   color: #F7F7F7;
-  font-size: xx-large;
+  font-size: 40px;
   padding: 100px;
  }
+
 
 .progress{
   display: flex;
@@ -94,13 +105,13 @@ nav a:hover{
   margin-top: 24px;
   gap: 24px;
   width: 100%;
-  height: 54px;
+  height: 50%;
 
 }
 
 progress{
   accent-color: #5856D6;
-  width: 327px;
+  width: 25%;
   padding: 30px;
 }
 
@@ -108,12 +119,13 @@ button {
   font-family: 'Lato';
   color:#F7F7F7;
   font-size: 14px;
-  padding: 12px 24px;
   background-color: #5AC8FA;
   border: none;
-  width: 120px;
-  height: 41px;
-}
+  width: 175px;
+  height: 58px;
+  cursor: pointer;
+  vertical-align:middle;
+  }
 
 h2 {
   color: #53575A;
@@ -123,20 +135,20 @@ h2 {
 .todo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 48px;
   margin-bottom: 100px;
   margin-top: 36px;
 }
 
 .single-todo{
-  width: 30%;
+  flex: 1 0 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: auto;
+  height: 150px;
 
-  padding: 24px;
+  padding: 24px 30px;
   gap: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.125);
   background: #FFFFFF;
@@ -154,15 +166,30 @@ footer{
   background-color: #CCCCCC;
 }
 
+.arrow{
+  display: none;
+}
+
 /* for mobile site */
 @media only screen and (max-width:844px) {
-  header, main, footer {
+  .navigation, main, footer {
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
   .hero {
     align-items: center;
     font-size: large;
+    height: 480px;
+   }
+
+   button {
+     width: 120px;
+     height: 41px;
    }
 
   .todo{
@@ -181,26 +208,63 @@ footer{
     gap: 12px;
   }
 
+  progress {
+    width: 100%;
+  }
+
   h2{
     font-size: 48px;
   }
 
-  .nav{
-    position: fixed;
-    left: -100%;
+  .nav {
+    position: absolute;
+    left: 0px;
+    height: 92vh;
+    top: 75px;
+    background-color:#FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+    width: 85%;
+    padding:24px;
   }
 
-  .burger-nav{
+  .nav a{
+    color:#53575A;
+  }
+
+  .nav li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid #E2E2E2;
+  }
+  .arrow {
     display: block;
-    height: 40px;
-    width: 100%;
-    background: url(/images/Hamburger-Icon.svg) no-repeat 98% center;
   }
 
-  .navbar{
-    width: 100%;
+  /* he put in an opacity zero but i don't think i want my links to fade in */
+
+  .burger{
+    display: block;
   }
+
 }
 
+.nav-active {
+  transform: translateX(0%);
+}
+
+.burger-active {
+  display:none;
+}
+
+.ex-active {
+  display: block;
+}
 
 

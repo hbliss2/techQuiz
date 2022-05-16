@@ -33,3 +33,23 @@ todoContainer.addEventListener("click", (event) => {
     updateProgress();
   }
 });
+
+let navSlide = () => {
+  let burger = document.querySelector(".burger");
+  let nav = document.querySelector(".nav");
+  let ex = document.querySelector(".ex");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    burger.classList.toggle("burger-active");
+    ex.classList.toggle("ex-active");
+  });
+
+  ex.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    burger.classList.toggle("burger-active");
+    ex.classList.toggle("ex-active");
+  });
+};
+
+navSlide();
